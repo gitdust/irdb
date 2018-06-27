@@ -1,0 +1,101 @@
+{
+  "name": "internet-resource-database",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dll.dev": "webpack --config ./scripts/webpack/dll",
+    "dll.pro": "NODE_ENV=production webpack --config ./scripts/webpack/dll",
+    "web": "webpack-dev-server --config ./scripts/webpack/dev",
+    "server": "npx nodemon ./server/www",
+    "cdn": "node ./scripts/cdn",
+    "build": "NODE_ENV=production node ./scripts/build",
+    "deploy": "npm run build && npm run cdn",
+    "start": "pm2 start ecosystem.config.js && npx pm2 monit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "iview": "^2.14.2",
+    "nprogress": "^0.2.0",
+    "vue": "^2.5.16",
+    "vue-head": "^2.0.12",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "ali-oss": "^5.2.0",
+    "autoprefixer": "^7.2.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-runtime": "^6.26.0",
+    "co": "^4.6.0",
+    "compression-webpack-plugin": "^1.1.11",
+    "css-loader": "^0.28.9",
+    "dotenv": "^6.0.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-vue": "^4.2.2",
+    "file-loader": "^1.1.11",
+    "fs-extra": "^6.0.1",
+    "happypack": "^5.0.0-beta.4",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.0",
+    "nodemon": "^1.17.5",
+    "postcss": "^6.0.17",
+    "postcss-loader": "^2.1.0",
+    "signale": "^1.1.0",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^3.0.2",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-md5-hash": "^0.0.6",
+    "webpack-merge": "^4.1.1",
+    "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "modules": false,
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          }
+        }
+      ],
+      "stage-2"
+    ],
+    "plugins": [
+      [
+        "transform-runtime",
+        {
+          "regenerator": true
+        }
+      ],
+      [
+        "import",
+        {
+          "libraryName": "iview",
+          "libraryDirectory": "src/components"
+        }
+      ]
+    ]
+  }
+}

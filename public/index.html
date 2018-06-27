@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>资源库</title>
+</head>
+<body>
+  <div id="app"></div>
+  <% if (process.env.NODE_ENV === 'development') { %>
+    <script src="<%= webpackConfig.output.publicPath %>statics/dll/base.js"></script>
+  <% } else { %>
+    <script src="<%= webpackConfig.output.publicPath %>statics/js/base.js"></script>
+  <% } %>
+</body>
+</html>
