@@ -1,8 +1,12 @@
 <template>
   <div class="resource">
-    <img
-      :src="resource.picture"
-      @error="errorHandler">
+    <base-link
+      :url="resource.picture"
+      class="img-wrapper">
+      <img
+        :src="resource.picture"
+        @error="errorHandler">
+    </base-link>
     <div class="info">
       <div class="title">
         <h2>
@@ -69,10 +73,11 @@ export default {
   &:hover {
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .2);
   }
-  img {
+  .img-wrapper {
     padding: 8px;
-    width: 400px;
-    height: 240px;
+    img {
+      width: 200px;
+    }
   }
   .info {
     flex: 1;
