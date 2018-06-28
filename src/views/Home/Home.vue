@@ -1,10 +1,6 @@
 <template>
   <div class="content">
-    <div class="banner">
-      <p>资源全部来自网络</p>
-      <base-link url="https://weibo.com/cmzyk">@传媒老跟班</base-link>
-      <base-link url="https://weibo.com/chuangbogongshe">@快递少年</base-link>
-    </div>
+    <original-authors />
     <ButtonGroup
       class="types">
       <Button
@@ -31,16 +27,16 @@
 </template>
 
 <script>
-import BaseLink from '@/components/BaseLink';
 import Resource from './components/Resource';
+import OriginalAuthors from './components/OriginalAuthors';
 import api from './api';
 
 
 export default {
   name: 'Home',
   components: {
-    BaseLink,
     Resource,
+    OriginalAuthors,
   },
   data() {
     return {
@@ -110,12 +106,6 @@ export default {
 
 <style lang="less" scoped>
 .content {
-  .banner {
-    font-size: 20px;
-    text-align: center;
-    background-color: #e8f9f0;
-    padding: 16px;
-  }
   .types {
     display: flex;
     justify-content: center;
