@@ -1,6 +1,6 @@
 <template>
   <footer class="app-footer">
-    &copy; 2018
+    &copy; 2018 Internet Resource Database <br>
     <base-link url="http://www.miitbeian.gov.cn/">皖ICP备17026479号-1</base-link>
   </footer>
 </template>
