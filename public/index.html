@@ -2,8 +2,12 @@
 <html lang="zh-Hans">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta name="description" content="互联网资源搜集站点,图片,音乐,公开课,图片转换,文档转换,视频转换,电子书,ebook,gif,工具">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  met
+  <meta name="baidu-site-verification" content="0PcYiL7uiR" />
   <title>资源库</title>
 </head>
 <body>
@@ -13,5 +17,14 @@
   <% } else { %>
     <script src="<%= webpackConfig.output.publicPath %>statics/js/base.js"></script>
   <% } %>
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c1872e73b2f30024b1042355e228de06";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 </body>
 </html>
