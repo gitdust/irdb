@@ -27,6 +27,7 @@
 </template>
 
 <script>
+import { transformProtocol } from '@/utils/helper';
 import Resource from './components/Resource';
 import OriginalAuthors from './components/OriginalAuthors';
 import api from './api';
@@ -73,7 +74,10 @@ export default {
 
       if (res) {
         const { count, results } = res;
-
+        results.forEach((r) => {
+          r.homepage = transformProtocol(r.homepage);
+          r.picture = transformProtocol(r.picture);
+        });
         if (this.pageNo === 1) {
           this.data = results;
         } else {

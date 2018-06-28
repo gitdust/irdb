@@ -3,7 +3,7 @@ import axios from 'axios';
 import store from '@/store';
 import * as globalMessage from './feedback';
 import * as globalLoading from './loading';
-import { hasOwnProperty } from './tools';
+import { hasOwnProperty } from './helper';
 
 const defaultConfig = {
   baseURL: API_HOST,
