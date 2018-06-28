@@ -8,7 +8,7 @@ let COUNT = 0;
 exports.getResources = async (body, res) => {
   let records = [];
   const pageNo = body.pageNo - 1;
-  const pageSize = 2;
+  const pageSize = 7;
   const pattern = { type: body.type };
   // utils.sleep(2);
   try {
