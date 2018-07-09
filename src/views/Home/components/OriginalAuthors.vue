@@ -33,6 +33,14 @@ export default {
           name: 'vipread',
           weibo: '/u/5960474994',
         },
+        {
+          name: '缠夹二先生',
+          weibo: '/570077640',
+        },
+        {
+          name: '万门大学',
+          weibo: '/wanmendaxue',
+        },
       ],
     };
   },
